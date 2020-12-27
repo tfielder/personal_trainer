@@ -1,5 +1,4 @@
 class DashboardsController < ApplicationController
-  def method_name
-
+  def show
   end
 end
