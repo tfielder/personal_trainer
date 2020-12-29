@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
-  get '/dashboard', to: 'users#dashboard'
+  get '/dashboard', to: 'dashboards#show'
 
   resources :users, only: [:new, :create, :edit, :update] do
     resources :workouts do
