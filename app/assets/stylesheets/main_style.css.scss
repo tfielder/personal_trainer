@@ -1,0 +1,27 @@
+.main-view {
+  background-color: black;
+  height: 50rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  //justify-content: center;
+
+  &__button {
+    background-color: green;
+    width: 8rem;
+    text-align: center;
+    padding: .5rem;
+    border-radius: 5px;
+    color: white;
+  }
+
+  &__picture {
+    background-color: black;
+    height: 65%;
+  }
+}
+
+h1 {
+  color: white;
+}
+
