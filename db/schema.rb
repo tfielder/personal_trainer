@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_27_225023) do
+ActiveRecord::Schema.define(version: 2020_12_29_014649) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,4 +25,41 @@ ActiveRecord::Schema.define(version: 2020_12_27_225023) do
     t.index ["email"], name: "index_admins_on_email", unique: true
   end
 
+  create_table "exercises", force: :cascade do |t|
+    t.string "type"
+    t.integer "sets"
+    t.integer "reps"
+    t.bigint "workout_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["workout_id"], name: "index_exercises_on_workout_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "password_digest"
+    t.integer "age"
+    t.string "gender"
+    t.float "height"
+    t.float "weight"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "workouts", force: :cascade do |t|
+    t.string "title"
+    t.date "date"
+    t.date "start_time"
+    t.date "end_time"
+    t.string "category"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_workouts_on_user_id"
+  end
+
+  add_foreign_key "exercises", "workouts"
+  add_foreign_key "workouts", "users"
 end
