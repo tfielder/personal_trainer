@@ -6,4 +6,10 @@ Rails.application.routes.draw do
     get 'admins/sign_out', to: 'admins/sessions#destroy', as: :destroy_admin_session
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  resources :users, only: [:new, :create, :edit, :update] do
+    resources :workouts do
+      resources :exercises
+    end
+  end
 end
