@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
-  get '/dashboard', to: 'dashboards#show'
+  get '/dashboard', to: 'dashboards#index'
 
   get '/workouts', to: 'workouts#index'
   get '/community', to: 'community#index'

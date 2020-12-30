@@ -17,11 +17,23 @@ $primary_text_color: white;
 .navbar {
   background-color: black;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
 
   &_nav-item {
     padding: 0 .5rem;
   }
+
+  &_navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  &_title {
+    padding: 0 1rem;
+  }
+
 }
 
 .main-view {
@@ -50,3 +62,18 @@ p {
   color: $primary_text_color;
 }
 
+a:link {
+  color: orange;
+}
+
+a:visited {
+  color: orange;
+}
+
+a:hover {
+  color: $primary_text_color;
+}
+
+a:active {
+  color: orange;
+}
