@@ -1,10 +1,31 @@
-.main-view {
+$primary_text_color: white;
+
+.root_view {
   background-color: black;
-  height: 50rem;
   display: flex;
   flex-flow: column;
   align-items: center;
-  //justify-content: center;
+  height: 50rem;
+}
+
+.form {
+  &-section {
+    color: $primary_text_color;
+  }
+}
+
+.navbar {
+  background-color: black;
+  display: flex;
+  align-items: center;
+
+  &_nav-item {
+    padding: 0 .5rem;
+  }
+}
+
+.main-view {
+  height: 50rem;
 
   &__button {
     background-color: green;
@@ -12,7 +33,7 @@
     text-align: center;
     padding: .5rem;
     border-radius: 5px;
-    color: white;
+    color: $primary_text_color;
   }
 
   &__picture {
@@ -22,6 +43,10 @@
 }
 
 h1 {
-  color: white;
+  color: $primary_text_color;
+}
+
+p {
+  color: $primary_text_color;
 }
 

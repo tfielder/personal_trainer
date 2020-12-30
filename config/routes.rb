@@ -13,6 +13,10 @@ Rails.application.routes.draw do
 
   get '/dashboard', to: 'dashboards#show'
 
+  get '/workouts', to: 'workouts#index'
+  get '/community', to: 'community#index'
+  get '/advice', to: 'advice#index'
+
   resources :users, only: [:new, :create, :edit, :update] do
     resources :workouts do
       resources :exercises

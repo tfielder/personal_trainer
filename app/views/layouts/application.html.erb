@@ -11,6 +11,9 @@
   </head>
 
   <body>
+    <% if current_user %>
+      <%= render "shared/navigation" %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
