@@ -113,17 +113,17 @@ $primary_text_color: white;
 
 .dashboard_view {
   @include basic_view
-  background-image: image-url("background_assets/bodybuilding.jpeg");
+  background-image: image-url("background_assets/workouts1.jpeg");
 }
 
 .workouts_view {
   @include basic_view
-  background-image: image-url("background_assets/workouts1.jpeg");
+  background-image: image-url("background_assets/workouts.jpeg");
 }
 
 .advice_view {
   @include basic_view
-  background-image: image-url("background_assets/workouts.jpeg");
+  background-image: image-url("background_assets/bodybuilding.jpeg");
 }
 
 .community_view {
