@@ -18,7 +18,9 @@ Rails.application.routes.draw do
   get '/advice', to: 'advice#index'
 
   resources :workouts do
-    resources :exercises
+    resources :exercises do
+      resources :setlists
+    end
   end
   # resources :users, only: [:new, :create, :edit, :update] do
   #
