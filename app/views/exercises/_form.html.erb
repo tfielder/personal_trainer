@@ -1,0 +1,11 @@
+<%= form_with model: [ @workout, @workout.exercises.build ] do |form| %>
+  <p>
+    <%= form.label :exercise %>
+    <br />
+    <%= form.text_field :exercise %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

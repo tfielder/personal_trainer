@@ -8,6 +8,32 @@ $primary_text_color: white;
   height: 50rem;
 }
 
+.form_label {
+  color: white;
+}
+
+.center_column {
+  background-color: black;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.home_view {
+  background-image: image-url("frontpage.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+
+  &__buttons-container {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
 .form {
   &-section {
     color: $primary_text_color;
@@ -54,8 +80,14 @@ $primary_text_color: white;
   }
 }
 
+.image {
+  height: auto;
+  width: auto;
+}
+
 h1 {
   color: $primary_text_color;
+  font-family: 'Allan', serif;
 }
 
 p {
@@ -76,4 +108,8 @@ a:hover {
 
 a:active {
   color: orange;
+}
+
+body {
+  margin: 0;
 }

@@ -1,0 +1,10 @@
+<%= form_with model: workout do |form| %>
+  <div>
+    <%= form.label :title, class: 'form_label' %><br />
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
