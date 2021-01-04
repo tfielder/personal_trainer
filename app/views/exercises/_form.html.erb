@@ -1,8 +1,8 @@
-<%= form_with model: [ @workout, @workout.exercises.build ] do |form| %>
+<%= form_with model: [ @workout, @workout.exercises.build] do |form|%>
   <p>
-    <%= form.label :exercise %>
+    <%= form.label :exercise_name %>
     <br />
-    <%= form.text_field :exercise %>
+    <%= form.text_field :exercise_name %>
   </p>
 
   <p>

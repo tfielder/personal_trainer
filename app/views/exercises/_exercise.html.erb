@@ -1,12 +1,11 @@
 <div>
   <p>
     Exercise:
-    <%= exercise.type %>
+    <%= exercise.exercise_name %>
   </p>
-
   <p>
-    <%= link_to 'Destroy Exercise', [exercise.workout, exercise],
-        method: :delete,
-        data: { confirm: "Are you sure?" } %>
-  </p>
+  <%= link_to 'Remove Exercise', [exercise.workout, exercise],
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+</p>
 </div>

@@ -22,7 +22,5 @@ Rails.application.routes.draw do
       resources :setlists
     end
   end
-  # resources :users, only: [:new, :create, :edit, :update] do
-  #
-  # end
+  resources :users, only: [:new, :create, :edit, :update]
 end

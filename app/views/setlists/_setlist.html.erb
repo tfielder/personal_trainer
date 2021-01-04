@@ -1,0 +1,13 @@
+<p>
+  Reps:
+  <%= setlist.reps %>
+</p>
+<p>
+  Weight:
+  <%= setlist.weight %>
+</p>
+<p>
+  <%= link_to 'Remove Set', [setlist.exercise, setlist],
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+</p>

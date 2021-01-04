@@ -1,0 +1,23 @@
+<%= form_with model: [ @exercise, @exercise.setlists.build ] do |form| %>
+  <p>
+    <%= form.label :type %><br />
+    <%= form.text_field :type %>
+  </p>
+  <p>
+    <%= form.label :weight %><br />
+    <%= form.number_field :weight %>
+  </p>
+  <p>
+    <%= form.label :reps %><br />
+    <%= form.number_field :reps %>
+  </p>
+
+  <p>
+    -- or --
+  </p>
+
+  <p>
+    <%= form.label :duration %><br />
+    <%= form.number_field :duration %>
+  </p>
+<% end %>
