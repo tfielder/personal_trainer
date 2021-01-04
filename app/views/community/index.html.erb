@@ -1,3 +1,54 @@
 <div class="root_view">
-  <h1>Community Page</h1>
+  <div class="community_view">
+    <h1>Community Page</h1>
+    <div class="community_view-slideshow_container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 6</div>
+          <%= image_tag "user_photos/user1.jpg", class: "image" %>
+          <!-- <img src="user_photos/user1.jpg" style="width:100%"> -->
+        <div class="text"></div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 6</div>
+          <%= image_tag "user_photos/user2.jpg", class: "image" %>
+          <!-- <img src="user_photos/user2.jpg" style="width:100%"> -->
+        <div class="text"></div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 6</div>
+          <%= image_tag "user_photos/user3.jpg", class: "image" %>
+          <!-- <img src="user_photos/user3.jpg" style="width:100%"> -->
+        <div class="text"></div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 6</div>
+          <%= image_tag "user_photos/user4.jpg", class: "image" %>
+          <!-- <img src="user_photos/user4.jpg" style="width:100%"> -->
+        <div class="text"></div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 6</div>
+          <%= image_tag "user_photos/user5.jpg", class: "image" %>
+          <!-- <img src="user_photos/user5.jpg" style="width:100%"> -->
+        <div class="text"></div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">6 / 6</div>
+          <img src="user_photos/user6.jpg" style="width:100%">
+        <div class="text"></div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+    </div>
+    <%= javascript_pack_tag 'photos' %>
+  </div>
 </div>

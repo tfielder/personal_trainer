@@ -17,10 +17,10 @@ Rails.application.routes.draw do
   get '/community', to: 'community#index'
   get '/advice', to: 'advice#index'
 
+  resources :users, only: [:new, :create, :edit, :update]
   resources :workouts do
     resources :exercises do
       resources :setlists
     end
   end
-  resources :users, only: [:new, :create, :edit, :update]
 end

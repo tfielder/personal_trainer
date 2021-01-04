@@ -1,14 +1,23 @@
 $primary_text_color: white;
 
-.root_view {
-  background-color: black;
+// Reusable stylings
+.exercise_div {
   display: flex;
-  flex-flow: column;
-  align-items: center;
-  height: 50rem;
+  width: 45rem;
+  color: white;
+
+  &-name {
+    margin-right: 1rem;
+  }
 }
 
 .form_label {
+  color: white;
+  margin-right: 1rem;
+}
+
+.form_field {
+  display: flex;
   color: white;
 }
 
@@ -17,21 +26,6 @@ $primary_text_color: white;
   display: flex;
   flex-flow: column;
   align-items: center;
-}
-
-.home_view {
-  background-image: image-url("frontpage.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-
-  &__buttons-container {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    justify-content: space-around;
-  }
 }
 
 .form {
@@ -85,6 +79,59 @@ $primary_text_color: white;
   width: auto;
 }
 
+// View Stylings
+@mixin dimensions {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin basic_view {
+  @include dimensions
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.root_view {
+  background-color: black;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 50rem;
+}
+
+.home_view {
+  @include basic_view
+  background-image: image-url("frontpage.jpeg");
+
+  &__buttons-container {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+.dashboard_view {
+  @include basic_view
+  background-image: image-url("background_assets/bodybuilding.jpeg");
+}
+
+.workouts_view {
+  @include basic_view
+  background-image: image-url("background_assets/workouts1.jpeg");
+}
+
+.advice_view {
+  @include basic_view
+  background-image: image-url("background_assets/workouts.jpeg");
+}
+
+.community_view {
+  @include dimensions
+}
+
+// Selector Stylings
+
 h1 {
   color: $primary_text_color;
   font-family: 'Allan', serif;
@@ -112,4 +159,91 @@ a:active {
 
 body {
   margin: 0;
+}
+
+// Photo Bank Styling
+* {box-sizing:border-box}
+
+.community_view-slideshow_container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
