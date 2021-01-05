@@ -3,7 +3,7 @@ class WorkoutsController < ApplicationController
     if current_user && current_user.id
       @workouts = Workout.where(user_id: current_user.id)
     else
-      redirect_to dashboard_path
+      redirect_to root_path
     end
   end
 
