@@ -1,4 +1,7 @@
+// Variables
 $primary_text_color: white;
+$slideshow_container_width: 55rem;
+$slideshow_container_height: 34rem;
 
 // Reusable stylings
 .exercise_div {
@@ -60,12 +63,13 @@ $primary_text_color: white;
   height: 50rem;
 
   &__button {
-    background-color: green;
-    width: 8rem;
+    width: 16rem;
     text-align: center;
     padding: .5rem;
-    border-radius: 5px;
+    border-radius: 10px;
     color: $primary_text_color;
+    margin: 0 2rem;
+    border: 2px solid orange;
   }
 
   &__picture {
@@ -101,13 +105,22 @@ $primary_text_color: white;
 
 .home_view {
   @include basic_view
-  background-image: image-url("frontpage.jpeg");
 
   &__buttons-container {
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: space-around;
+  }
+
+  &-image {
+    height: 40rem;
+    width: auto;
+    margin-left: 2rem;
+  }
+
+  &-login_button {
+    text-decoration: none;
   }
 }
 
@@ -131,7 +144,7 @@ $primary_text_color: white;
   }
 }
 
-.community_view {
+._view {
   @include dimensions
 }
 
@@ -170,14 +183,22 @@ body {
 * {box-sizing:border-box}
 
 .community_view-slideshow_container {
-  max-width: 1000px;
+  //max-width: 1000px;
+  height: $slideshow_container_height;
+  width: $slideshow_container_width;
   position: relative;
   margin: auto;
 }
 
 .community_image {
-  width: 40rem;
   height: auto;
+  width: $slideshow_container_width;
+}
+
+.community_image-vertical {
+  height: $slideshow_container_height;
+  width: auto;
+  margin: 0 30%;
 }
 
 .mySlides {

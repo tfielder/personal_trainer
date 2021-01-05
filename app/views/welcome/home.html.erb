@@ -1,13 +1,13 @@
 <div class="root_view">
   <div class="home_view center_column">
     <h1>Personal Trainer</h1>
-    <br />
+    <%= image_tag "frontpage.jpg", class: "home_view-image" %>
     <div class="home_view__buttons-container">
-      <div class="main-view__button">
+      <!-- <div class="main-view__button">
         <%= link_to "Continue as Guest", root_path %>
-      </div>
+      </div> -->
       <div class="main-view__button">
-        <%= link_to "Login/Create Account", login_path %>
+        <%= link_to "Login / Create Account", login_path, class: "home_view-login_button" %>
       </div>
     </div>
   </div>
