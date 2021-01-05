@@ -1,11 +1,19 @@
 class WorkoutsController < ApplicationController
   def index
-    @workouts = Workout.where(user_id: current_user.id)
+    if current_user && current_user.id
+      @workouts = Workout.where(user_id: current_user.id)
+    else
+      redirect_to root_path
+    end
   end
 
   def show
     @workout = Workout.find(params[:id])
-    @workout if @workout.user_id == current_user.id
+    if @workout.user_id == current_user.id
+      @workout
+    else
+      redirect_to dashboard_path
+    end
   end
 
   def new
