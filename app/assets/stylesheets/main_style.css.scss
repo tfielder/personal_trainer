@@ -124,6 +124,11 @@ $primary_text_color: white;
 .advice_view {
   @include basic_view
   background-image: image-url("background_assets/bodybuilding.jpeg");
+
+  &-links {
+    align-self: flex-start;
+    margin-left: 2rem;
+  }
 }
 
 .community_view {

@@ -1,10 +1,11 @@
 class WorkoutsController < ApplicationController
   def index
-    @workouts = Workout.all
+    @workouts = Workout.where(user_id: current_user.id)
   end
 
   def show
     @workout = Workout.find(params[:id])
+    @workout if @workout.user_id == current_user.id
   end
 
   def new
@@ -26,6 +27,7 @@ class WorkoutsController < ApplicationController
 
   def edit
     @workout = Workout.find(params[:id])
+    @workout if @workout.user_id == current_user.id
   end
 
   def update
@@ -40,7 +42,7 @@ class WorkoutsController < ApplicationController
 
   def destroy
     @workout = Workout.find(params[:id])
-    @workout.destroy
+    @workout.destroy if @workout.user_id == current_user.id
 
     redirect_to dashboard_path
   end
